@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="001 Inbox">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Romblings</title>
+
+                <!-- Includes -->
+                
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script src="/obs.html/static/tex-chtml.js"></script>
+<script src="/obs.html/static/load_mathjax.js"></script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = '001 Inbox';
+                        const HTML_URL_PREFIX = '';
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Romblings</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=001 Inbox" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        <ul class="dir-list">
+	<li><a class="active" href="/001 Inbox.html"  >001 Inbox</a></li>
+	<li><a class="" href="/ActivePassive.html"  >ActivePassive</a></li>
+	<li><a class="" href="/Advertisment.html"  >Advertisment</a></li>
+	<li><a class="" href="/Anhedonia.html"  >Anhedonia</a></li>
+	<li><a class="" href="/Automatic Thoughts.html"  >Automatic Thoughts</a></li>
+	<li><a class="" href="/Autopilot.html"  >Autopilot</a></li>
+	<li><a class="" href="/Cognitive Dissonance.html"  >Cognitive Dissonance</a></li>
+	<li><a class="" href="/Confirmation Bias.html"  >Confirmation Bias</a></li>
+	<li><a class="" href="/Consumerism.html"  >Consumerism</a></li>
+	<li><a class="" href="/Core Tenets.html"  >Core Tenets</a></li>
+	<li><a class="" href="/Crisis.html"  >Crisis</a></li>
+	<li><a class="" href="/Destination Mindset.html"  >Destination Mindset</a></li>
+	<li><a class="" href="/Digital Gardens.html"  >Digital Gardens</a></li>
+	<li><a class="" href="/Dissociation.html"  >Dissociation</a></li>
+	<li><a class="" href="/Distortions.html"  >Distortions</a></li>
+	<li><a class="" href="/Everything You Know Is Wrong.html"  >Everything You Know Is Wrong</a></li>
+	<li><a class="" href="/Hanlon's Razor.html"  >Hanlon's Razor</a></li>
+	<li><a class="" href="/Hope Kit.html"  >Hope Kit</a></li>
+	<li><a class="" href="/Ikea Effect.html"  >Ikea Effect</a></li>
+	<li><a class="" href="/Inertia.html"  >Inertia</a></li>
+	<li><a class="" href="/Inner Child.html"  >Inner Child</a></li>
+	<li><a class="" href="/InternetAddiction.html"  >InternetAddiction</a></li>
+	<li><a class="" href="/JPMR.html"  >JPMR</a></li>
+	<li><a class="" href="/Journaling.html"  >Journaling</a></li>
+	<li><a class="" href="/Laziness.html"  >Laziness</a></li>
+	<li><a class="" href="/Libre.html"  >Libre</a></li>
+	<li><a class="" href="/Linehan.html"  >Linehan</a></li>
+	<li><a class="" href="/Marketing.html"  >Marketing</a></li>
+	<li><a class="" href="/McFeely.html"  >McFeely</a></li>
+	<li><a class="" href="/Money is the root.html"  >Money is the root</a></li>
+	<li><a class="" href="/Mood Thought Diary.html"  >Mood Thought Diary</a></li>
+	<li><a class="" href="/ObjectConstancy.html"  >ObjectConstancy</a></li>
+	<li><a class="" href="/Occam's Razor.html"  >Occam's Razor</a></li>
+	<li><a class="" href="/Open Source.html"  >Open Source</a></li>
+	<li><a class="" href="/Poe's Law.html"  >Poe's Law</a></li>
+	<li><a class="" href="/Queer Nation Manifesto.html"  >Queer Nation Manifesto</a></li>
+	<li><a class="" href="/Quotes.html"  >Quotes</a></li>
+	<li><a class="" href="/Rehabilitation.html"  >Rehabilitation</a></li>
+	<li><a class="" href="/Spoon Theory.html"  >Spoon Theory</a></li>
+	<li><a class="" href="/The Cognitive Bias Codex.svg"  class="external-link">The Cognitive Bias Codex</a></li>
+	<li><a class="" href="/Uncertainty.html"  >Uncertainty</a></li>
+	<li><a class="" href="/bias.html"  >bias</a></li>
+	<li><a class="" href="/dark patterns.html"  >dark patterns</a></li>
+	<li><a class="" href="/feminism.html"  >feminism</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/intersectionalism.html"  >intersectionalism</a></li>
+	<li><a class="" href="/mindfulness.html"  >mindfulness</a></li>
+	<li><a class="" href="/ontological parasite.html"  >ontological parasite</a></li>
+	<li><a class="" href="/philosophies.html"  >philosophies</a></li>
+	<li><a class="" href="/subliminal.html"  >subliminal</a></li>
+	<li><a class="" href="/tools.html"  >tools</a></li>
+	<li><a class="" href="/we create bubbles that just echo what we feel.html"  >we create bubbles that just echo what we feel</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                        <div class="container">
+                                <div class="toc">
+<ul>
+<li><a href="#here-i-will-note-anything-that-sound-interesting-to-me-i-might-revisit-someday-and-read-more-about-it-and-itll-have-its-own-note-if-not-itll-just-lie-here-and-collect-virtual-dust-anything-interesting-that-i-can-just-make-a-note-of-and-then-go-on-about-my-day-its-okay-if-it-is-disorganized-consider-this-a-dumpyard-of-interesting-trinkets" class="anchor-link">Here I will note anything that sound interesting to me. I might revisit someday and read more about it, and it'll have its own note. If not, it'll just lie here and collect virtual dust.  Anything interesting that I can just make a note of and then go on about my day.  It's okay if it is disorganized. Consider this a dumpyard of interesting trinkets.</a></li>
+<li><a href="#beat-generation-poets-rabbit-hole-how-they-connect-to-queer" class="anchor-link">Beat generation poets rabbit hole, how they connect to queer</a></li>
+<li><a href="#counterculture" class="anchor-link" class="anchor-link">Counterculture</a></li>
+<li><a href="#obsidian-stuff" class="anchor-link">Obsidian Stuff</a></li>
+</ul>
+</div>
+<h5 id="here-i-will-note-anything-that-sound-interesting-to-me-i-might-revisit-someday-and-read-more-about-it-and-itll-have-its-own-note-if-not-itll-just-lie-here-and-collect-virtual-dust-anything-interesting-that-i-can-just-make-a-note-of-and-then-go-on-about-my-day-its-okay-if-it-is-disorganized-consider-this-a-dumpyard-of-interesting-trinkets">Here I will note anything that sound interesting to me. I might revisit someday and read more about it, and it'll have its own note. If not, it'll just lie here and collect virtual dust.  Anything interesting that I can just make a note of and then go on about my day.  It's okay if it is disorganized. Consider this a dumpyard of interesting trinkets.</h5>
+<h4 id="beat-generation-poets-rabbit-hole-how-they-connect-to-queer">Beat generation poets rabbit hole, how they connect to <strong>queer</strong></h4>
+<ul>
+<li>Beat generation poets - Jack Kerouac,  Ginsberg and  Peter Orlovsky, William S Burroughs    </li>
+<li>
+<p>Indecent Advances <br />
+A Hidden History of True Crime and Prejudice Before Stonewall <br />
+By James Polchin   -&gt;  ISBN 9781640093874 -       </p>
+</li>
+<li>
+<p>Kill Your Darlings (2013) -&gt; movie   </p>
+</li>
+<li>Read Howl (collection of poems)   </li>
+</ul>
+<h2 id="counterculture">Counterculture</h2>
+<p>More Sociology <br />
+More Phil, More <strong>Absurdism</strong>   </p>
+<hr />
+<h2 id="obsidian-stuff">Obsidian Stuff</h2>
+<p><a href="https://forum.obsidian.md/t/daily-and-weekly-reviews-dataview/17021" class="external-link">https://forum.obsidian.md/t/daily-and-weekly-reviews-dataview/17021</a> <br />
+Super Charged Links  <br />
+Explore dataview more    </p>
+<hr />
+<p><a href="https://en.m.wikipedia.org/wiki/Martha_Mitchell_effect" class="external-link">Martha Mitchell effect</a> <br />
+<a href="https://en.wikipedia.org/wiki/Self-fulfilling_prophecy" class="external-link">https://en.wikipedia.org/wiki/Self-fulfilling_prophecy</a>   </p>
+<hr />
+<p><a href="https://en.m.wikipedia.org/wiki/Anarchism_without_adjectives" class="external-link" title="Anarchism without adjectives">Anarchism without adjectives</a>   </p>
+<hr />
+<p>asynchronous communications   </p>
+<hr />
+<p>This comment from Reddit -  <br />
+<em>"Males have wings. They don't live long. No queen means no males. <br />
+What's interesting is societal roles of ants within the colony. Each any has a specific role within the colony. These would appear to be a collective of foragers. They ate either all from the same colony or they are Argentine ants. Ants produce pheromones. Most ants if the same species but of different colonies will fight and kill each other. Argentine ants are the only known species that don't do this and we don't know why. In theory, all Argentine ants form a single colony which would be insane because they are found on multiple continents. <br />
+Ants death spirals exist so this single instance of these ants operating without a queen is the only known example of this behavior in ants in the entire world, as to my knowledge. I'm an exterminator just shy of a decade in the industry. I have no degree in entomology, so there are many much more knowledgeable folks than myself. <br />
+Termite colonies have complex climate control that includes bringing moisture with them wherever the colony expands. <br />
+Solitary wasps produce no known allergens. <br />
+Wolf spider and yellow sack spider bite can cause necrosis if the person bitten reacts badly. Not as bad as a brown recluse bite, but still, necrosis is necrosis. <br />
+Delusional parasitosis, forgive my spelling, is very real and surprisingly common. <br />
+Lice prefer clean hair over dirty hair. <br />
+Bedbugs have sex organs but typically breed by the male literally just stabbing a female with his spike like penis in a process called traumatic insemination and a theory as to why bedbugs spread in the manner that they do could suggest its the females trying to get away from the males."</em>     </p>
+<p><em>"Simply, interesting facts about a variety if insects that most people don't know. <br />
+I've forgotten more about insects than most will learn in a lifetime. I can talk for hours about pest control. I'd say the majority of exterminators that have more than a few years in can do the same. We don't bring it up unless asked. Most people don't have a clue as RI the extensive knowledge their exterminator actually has. The majority of what we do is simply maintence. <br />
+The insect world is vast. There are so many different insects even regionally, not to mentioned rarity of various species. I dont come across many new insects anymore, the ones I do happen to be very rare in my region. At this point, the things that surprise me tend to be new places I've found bugs. I've seen ant colony is working and running aquarium aerators. I found a colony living underneath the glass of an aquarium. They were almost completely contained living along the exterior. They collected food from spilled fish food, moisture from condensate off the glass as well as moisture from the tank itself. I had my suspicions on bedbugs feeding off creatures other than humans before the science suggested it was possible, through my own observations. I had a really bad bedbug job, possibly the worst one I've ever seen. I found them living in a bird cage and 2 pet carriers for dogs. Until this point, the science said they didn't do that. There is something called a bat bug that looks damn near identical to a bedbug that feeds off of bats. We know they will take a blood meal off of humans but require bat blood to reproduce and complete their stage changes. Seemed to me that despite what the science said, in a similar situation, bedbugs could take a blood meal from a different source, but still require human blood to reproduce and also complete their stage changes. I found a type of solitary Prarie bee that prefers a specific soil composition to build their nest. An entire half acre plot land with a hole about every square inch. Thousands of these things took over these peoples yard. They run for about 6 weeks in the spring. I had one and another tech had one at the same time in a different location. I've only ever seen this once and I've never seen anything quite like it. Cicada killers behave in a similar manner, they also run about 6 weeks in my region, just in late summer, but you never see those kinds of number. 30 in a yard is a lot. I ended up calling the Perdue University Department of Entomology amd spoke with a grad student working on a PH.D. The gentleman ended up doing some quick research for me and found a paper written by someone with a Doctorates in Entomology about having the same issues in his garden. Absolutely fascinating stuff, and begged me not to kill them as loss of habitat has forced them into situations like this. They aren't endangered yet, but they are in that path. I explained the situation to the home owner and gave them some other compromised solutions that they decided to try. I told them I would kill them if they truly wanted me to, but they would come back. The solution is changing the soil composition, they ended up mulching an area for the kids and dogs to play in and let the bee have their 6 weeks with the rest of the yard. That one left me all warm and fuzzy. It's not often we get to find a solution like that. The bees were happy the homeowner was happy. <br />
+If you want to know about all the insect and insect eggs you eat on a daily basis, message me. Those discussions tend to freak people out. I warn you, I will tell you what I know about this stuff if you really want to know it but you won't look at a variety of foods the same. <br />
+I can also tell you how to inspect second hand furniture for cockroaches and bedbugs before purchase. I can walk you through bedbug inspections for hotel rooms. I can tell you what to look for in restaurants. I can tell you which over the counter pesticides and rodenticides work and don't work. I can discuss, in depth and detail the behavioral patterns of a variety of pests, mice and rats included, which will typically increase the number you kill with snap traps and catch with glue boards. <br />
+I can tell you vibrators are susceptible to bedbug infestation. I can tell you the dumb shit people think will work to combat their pest issues. I can also discuss the pros and cons of 25(b) exempt products (essential oil pesticides) I can tell you organic foods are still sprayed with pesticides, just not synthetic pesticides. <br />
+This is a wonderful tip. On chemical labels, they list the what to do of this happens from top to bottom by severity. Bleach labels always have what to do if swallowed at the top of the list. No matter what it is, the thing on the top of the list will be the most dangerous. That way, people in a panic don't have to read the whole thing looking for the right procedure. If you want to know anything about a chemical product Google the product name and add SDS afterwards. You can get trial results, study results, and all manner of information"</em>pens from top to bottom by severity. Bleach labels always have what to do if swallowed at the top of the list. No matter what it is, the thing on the top of the list will be the most dangerous. That way, people in a panic don't have to read the whole thing looking for the right procedure. If you want to know anything about a chemical product Google the product name and add SDS afterwards. You can get trial results, study results, and all manner of information"  <br />
+<strong>-- u/Kittenfabstodes</strong>   </p>
+<hr />
+<p><strong>&gt; [mindfulness-based stress reduction]</strong>(https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction "Mindfulness-based stress reduction") <br />
+<em>"eight-week evidence-based program that offers secular, intensive <a href="https://en.wikipedia.org/wiki/Mindfulness" class="external-link" title="Mindfulness">mindfulness</a> training to assist people with stress, anxiety, depression and pain"</em>   </p>
+<hr />
+<p>Subculture <a href="#counterculture" class="anchor-link" class="anchor-link">Counterculture</a> <br />
+Hacker subculture <br />
+Nerd subculture   </p>
+<p>Free Software Movement  <br />
+FSF  <br />
+GNU  <br />
+GNU/Linux    </p>
+<p><a href="https://en.wikipedia.org/wiki/History_of_personal_computers" class="external-link">https://en.wikipedia.org/wiki/History_of_personal_computers</a> <br />
+History of the Internet   </p>
+<p>movies and other media related to above - Pirates Of Silicon Valley; Nerds 2.0.1: A Brief History of the Internet , Triumph of the Nerds, Revolution OS   </p>
+<p><em>Nigerian computer scientist <a href="https://en.wikipedia.org/wiki/Philip_Emeagwali" class="external-link" title="Philip Emeagwali">Philip Emeagwali</a> wrote a criticism of the documentary's website listing 48 white males out of 50 internet pioneers, with none of them being black.<a href="/not_created.md" class="external-link" class="external-link">6</a>(https://en.wikipedia.org/wiki/Nerds_2.0.1#cite_note-SUNY-6) Emeagwali said, "Since white males control the media, 96 percent of the Internet pioneers were white males. The documentary <em>Nerds 2.0.1</em> reminded me of the African proverb: 'Only when lions have historians will hunters cease to be heroes.'"<a href="/not_created.md" class="external-link" class="external-link">6</a>(https://en.wikipedia.org/wiki/Nerds_2.0.1#cite_note-SUNY-6)</em>  In reference to <em><strong>Nerds 2.0.1: A Brief History of the Internet</strong></em>   </p>
+<p>Andrew S Tenenbaum (minix) - Linus - microkernels - <a href="https://www.cs.vu.nl/~ast/brown/rebuttal/" class="external-link">https://www.cs.vu.nl/~ast/brown/rebuttal/</a> Ken Brown incident</p>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/queer/index.html">queer</a></li>
+	<li><a class="backlink" href="/obs.html/tags/Absurdism/index.html">Absurdism</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js">
+    <div id="A59639348300224976245541984462619883939{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B59639348300224976245541984462619883939{level}" level="{level}" note_temp_id="59639348300224976245541984462619883939" onclick="window.ObsHtmlGraph.run(this, '59639348300224976245541984462619883939', '001 Inbox');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C59639348300224976245541984462619883939{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        console.log(e);
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+
+        </script>
+
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>

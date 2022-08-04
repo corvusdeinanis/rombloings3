@@ -75,7 +75,7 @@ blockquote p {
     padding: 2rem;
     scrollbar-color: rgba(var(--code-hightlight-color), 0.4) #0000;
     scroll-margin-top: 2rem;
-    max-width: 120rem;
+    max-width: 90rem;
     flex: auto;
     font-size: 11pt;
 }
@@ -1354,7 +1354,7 @@ span.linenos.special {
     #search-results-box {
         height: 0rem;
         margin-top: 1rem;
-        max-width: 120rem;
+        max-width: 90rem;
     }
     #search-results {
         height: calc(100% - 1rem);

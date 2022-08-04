@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="Queer Nation Manifesto">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Romblings</title>
+
+                <!-- Includes -->
+                
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script src="/obs.html/static/tex-chtml.js"></script>
+<script src="/obs.html/static/load_mathjax.js"></script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'Queer Nation Manifesto';
+                        const HTML_URL_PREFIX = '';
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+                        <div id="header_flex" class="flex_row">
+                                <a href="/index.html" id="homelink" title="Clear screen and go to homepage">Romblings</a>
+                                <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                                        ≡
+                                </div>
+                                <div id="navbar" class="navbar requires_js">
+                                        
+                                        <div class="icon-tray">
+                                                <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                                        <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                                        <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="/obs.html/graph/index.html?node=Queer Nation Manifesto" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                                        <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                                <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                                
+                                        </div>
+                                        <div style="display: flex; flex-direction:column">
+                                                <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                                                <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+                </div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+                                <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+                                <div id="left_pane_content" class="left_pane_content">
+                                        <ul class="dir-list">
+	<li><a class="" href="/001 Inbox.html"  >001 Inbox</a></li>
+	<li><a class="" href="/ActivePassive.html"  >ActivePassive</a></li>
+	<li><a class="" href="/Advertisment.html"  >Advertisment</a></li>
+	<li><a class="" href="/Anhedonia.html"  >Anhedonia</a></li>
+	<li><a class="" href="/Automatic Thoughts.html"  >Automatic Thoughts</a></li>
+	<li><a class="" href="/Autopilot.html"  >Autopilot</a></li>
+	<li><a class="" href="/Cognitive Dissonance.html"  >Cognitive Dissonance</a></li>
+	<li><a class="" href="/Confirmation Bias.html"  >Confirmation Bias</a></li>
+	<li><a class="" href="/Consumerism.html"  >Consumerism</a></li>
+	<li><a class="" href="/Core Tenets.html"  >Core Tenets</a></li>
+	<li><a class="" href="/Crisis.html"  >Crisis</a></li>
+	<li><a class="" href="/Destination Mindset.html"  >Destination Mindset</a></li>
+	<li><a class="" href="/Digital Gardens.html"  >Digital Gardens</a></li>
+	<li><a class="" href="/Dissociation.html"  >Dissociation</a></li>
+	<li><a class="" href="/Distortions.html"  >Distortions</a></li>
+	<li><a class="" href="/Everything You Know Is Wrong.html"  >Everything You Know Is Wrong</a></li>
+	<li><a class="" href="/Hanlon's Razor.html"  >Hanlon's Razor</a></li>
+	<li><a class="" href="/Hope Kit.html"  >Hope Kit</a></li>
+	<li><a class="" href="/Ikea Effect.html"  >Ikea Effect</a></li>
+	<li><a class="" href="/Inertia.html"  >Inertia</a></li>
+	<li><a class="" href="/Inner Child.html"  >Inner Child</a></li>
+	<li><a class="" href="/InternetAddiction.html"  >InternetAddiction</a></li>
+	<li><a class="" href="/JPMR.html"  >JPMR</a></li>
+	<li><a class="" href="/Journaling.html"  >Journaling</a></li>
+	<li><a class="" href="/Laziness.html"  >Laziness</a></li>
+	<li><a class="" href="/Libre.html"  >Libre</a></li>
+	<li><a class="" href="/Linehan.html"  >Linehan</a></li>
+	<li><a class="" href="/Marketing.html"  >Marketing</a></li>
+	<li><a class="" href="/McFeely.html"  >McFeely</a></li>
+	<li><a class="" href="/Money is the root.html"  >Money is the root</a></li>
+	<li><a class="" href="/Mood Thought Diary.html"  >Mood Thought Diary</a></li>
+	<li><a class="" href="/ObjectConstancy.html"  >ObjectConstancy</a></li>
+	<li><a class="" href="/Occam's Razor.html"  >Occam's Razor</a></li>
+	<li><a class="" href="/Open Source.html"  >Open Source</a></li>
+	<li><a class="" href="/Poe's Law.html"  >Poe's Law</a></li>
+	<li><a class="active" href="/Queer Nation Manifesto.html"  >Queer Nation Manifesto</a></li>
+	<li><a class="" href="/Quotes.html"  >Quotes</a></li>
+	<li><a class="" href="/Rehabilitation.html"  >Rehabilitation</a></li>
+	<li><a class="" href="/Spoon Theory.html"  >Spoon Theory</a></li>
+	<li><a class="" href="/The Cognitive Bias Codex.svg"  class="external-link">The Cognitive Bias Codex</a></li>
+	<li><a class="" href="/Uncertainty.html"  >Uncertainty</a></li>
+	<li><a class="" href="/bias.html"  >bias</a></li>
+	<li><a class="" href="/dark patterns.html"  >dark patterns</a></li>
+	<li><a class="" href="/feminism.html"  >feminism</a></li>
+	<li><a class="" href="/index.html"  >index</a></li>
+	<li><a class="" href="/intersectionalism.html"  >intersectionalism</a></li>
+	<li><a class="" href="/mindfulness.html"  >mindfulness</a></li>
+	<li><a class="" href="/ontological parasite.html"  >ontological parasite</a></li>
+	<li><a class="" href="/philosophies.html"  >philosophies</a></li>
+	<li><a class="" href="/subliminal.html"  >subliminal</a></li>
+	<li><a class="" href="/tools.html"  >tools</a></li>
+	<li><a class="" href="/we create bubbles that just echo what we feel.html"  >we create bubbles that just echo what we feel</a></li>
+</ul>
+
+                                </div>
+                        </div>
+                        <div class="container">
+                                <div class="toc">
+<ul>
+<li><a href="#queer-nation-manifesto" class="anchor-link">Queer Nation Manifesto</a></li>
+</ul>
+</div>
+<h2 id="queer-nation-manifesto"><a href="https://www.historyisaweapon.com/defcon1/queernation.html" class="external-link"><mark>Queer Nation Manifesto</mark></a></h2>
+<ol>
+<li>
+<p><em>⭐"Being queer means leading a different sort of life. It's not about the mainstream, profit-margins, patriotism, patriarchy or being assimilated. It's not about executive directors, privilege and elitism. </em><em>It's about being on the margins, defining ourselves; it's about gender-f--- and secrets, what's beneath the belt and deep inside the heart; it's about the night.</em><em> Being queer is "grass roots" because we know that everyone of us, every body, every c---, every heart and a-- and d--- is a world of pleasure waiting to be explored. Everyone of us is a world of infinite possibility."</em>       </p>
+</li>
+<li>
+<p>How can I tell you. How can I convince you, brother; sister that your life is in danger. That everyday you wake up alive, relatively happy, and a functioning human being, you are committing a rebellious act. You as an alive and functioning queer are a revolutionary. There is nothing on this planet that validates, protects or encourages your existence. It is a miracle you are standing here reading these words. You should by all rights be dead.     </p>
+</li>
+</ol>
+<p>Don't be fooled, straight people own the world and the only reason you have been spared is you're smart, lucky, or a fighter. Straight people have a privilege that allows them to do whatever they please and f--- without fear. But not only do they live a life free of fear; they flaunt their freedom in my face. Their images are on my TV, in the magazine I bought, in the restaurant I want to eat in, and on the street where I live. I want there to be a moratorium on straight marriage, on babies, on public displays of affection among the opposite sex and media images that promote heterosexuality. Until I can enjoy the same freedom of movement and sexuality, as straights, their privilege must stop and it must be given over to me and my queer sisters and brothers.     </p>
+<p>Straight people will not do this voluntarily and so they must be forced into it. Straights must be frightened into it. Terrorized into it. Fear is the most powerful motivator. No one will give us what we deserve. Rights are not given they are taken, by force if necessary.     </p>
+<p>It is easier to fight when you know who your enemy is. Straight people are you enemy. They are your enemy when they don't acknowledge your invisibility and continue to live in and contribute to a culture that kills you.     </p>
+<p>Every day one of us is taken by the enemy. Whether it is an AIDS death due to homophobic government inaction or a lesbian bashing in an all-night diner (in a supposedly lesbian neighborhood), we are being systematically picked off and we will continue to be wiped out unless we realize that if they take one of us they must take all of us.   </p>
+<ol>
+<li>
+<p><strong>The strong sisters told the brothers that there were two important things to remember about the coming revolutions. The first is that we will get our a--es kicked. The second is that we will win.</strong>   </p>
+</li>
+<li>
+<p>I hate straight people who think they have anything intelligent to say about "outing." I hate straight people who think stories about themselves are "universal" but stories about us are only about homosexuality. I hate straight recording artists who make their careers off of queer people, then attack us, then act hurt when we get angry and then deny having wronged us rather than apologize for it. I hate straight people who say, "I don't see why you feel the need to wear those buttons and t-shirts. I don't go around tell the whole world I'm straight."      </p>
+</li>
+</ol>
+<p>I hate that in twelve years of public education I was never taught about queer people. I hate that I grew up thinking I was the only queer in the world, and I hate even more that most queer kids still grow up the same way. I hate that I was tormented by other kids for being a faggot, but more that I was taught to feel ashamed for being the object of their cruelty, taught to feel it was my fault. I hate that the Supreme Court of this country says it's okay to criminalize me because of how I make love. I hate that so many straight people are so concerned about my goddamned sex life. I hate that so many twisted straight people become parents, while I have to fight like hell to be <em>allowed</em> to be a father. I hate straights.</p>
+<div class="note-footer">
+<div class="backlinks" style="display:none"></div>
+
+<div class="tags">
+<h2>Tags</h2>
+<ul>
+	<li><a class="backlink" href="/obs.html/tags/queer/index.html">queer</a></li>
+</ul>
+</div>
+
+</div>
+<div class="graph requires_js">
+    <div id="A83576905116406708721769296984081303012{level}" class="graph_div"></div>
+    
+    <div class="graph-button-row" style="display:flex;">
+        <button class="graph_button graph_show_button" id="B83576905116406708721769296984081303012{level}" level="{level}" note_temp_id="83576905116406708721769296984081303012" onclick="window.ObsHtmlGraph.run(this, '83576905116406708721769296984081303012', 'Queer Nation Manifesto');">
+            Show Graph
+        </button>
+        <button class="graph_button graph_type_button" id="C83576905116406708721769296984081303012{level}" style="flex:1" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+            2D
+        </button>
+    </div>
+</div>
+
+<script type="module">
+    if (window.ObsHtmlGraph == undefined){
+        import('/obs.html/static/graph.js').then((Module) => {
+            window.ObsHtmlGraph = Module;
+            window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+        })
+    }
+</script>
+
+
+
+
+                                <!-- end content -->
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+                                <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+                                <div id="right_pane_content" class="right_pane_content">
+                                        
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        console.log(e);
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        localStorage.setItem('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = localStorage.getItem('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+
+        </script>
+
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>
